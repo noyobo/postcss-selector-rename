@@ -35,7 +35,7 @@ default options
 ```
 
 - `test?: (name: string) => boolean` | `RegExp` only rename when return true
-- `selector?: Record<'classes' | 'tags' | 'ids', boolean>` walk selector type
+- `selector?: Partial<Record<'classes' | 'tags' | 'ids', boolean>>` walk selector type
 - `rename: (name: string, type: 'classes' | 'tags' | 'ids') => string` return new selector name
 
 ## Usage

@@ -1,7 +1,7 @@
 declare namespace plugin {
   interface Options {
     test?: ((name: string, type: 'classes' | 'tags' | 'ids') => boolean) | RegExp;
-    selector?: Record<'classes' | 'tags' | 'ids', boolean>;
+    selector?: Partial<Record<'classes' | 'tags' | 'ids', boolean>>;
     rename: (name: string, type: 'classes' | 'tags' | 'ids') => string;
   }
 }
