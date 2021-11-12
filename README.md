@@ -34,9 +34,9 @@ default options
 }
 ```
 
-- `test(name: string): boolean` only rename when return true. type: `Function` `RegExp`
-- `selector` walk selector type, keys: `classes` `ids` `tags`
-- `rename(name: string, type: 'classes' | 'ids' | 'tags'): string` return new selector name
+- `test?: (name: string) => boolean` | `RegExp` only rename when return true
+- `selector?: Record<'classes' | 'tags' | 'ids', boolean>` walk selector type
+- `rename: (name: string, type: 'classes' | 'tags' | 'ids') => string` return new selector name
 
 ## Usage
 
