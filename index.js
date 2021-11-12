@@ -29,10 +29,16 @@ const Plugin = (options = {}) => {
     opts.selector.tags && selectors.walkTags(renameNode.bind(null, 'tags'));
   });
 
+  function isAtRuleChild(rule) {
+    return rule.parent && rule.parent.type === 'atrule';
+  }
+
   return {
     postcssPlugin: 'postcss-selector-rename',
     Rule(rule) {
-      return selectorProcessor.process(rule);
+      if (!isAtRuleChild(rule)) {
+        return selectorProcessor.process(rule);
+      }
     },
   };
 };
