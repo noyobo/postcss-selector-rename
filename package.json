@@ -1,0 +1,31 @@
+{
+  "name": "postcss-selector-rename",
+  "version": "1.0.0",
+  "description": "A PostCSS plugin to rename css selector",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": "git@github.com:noyobo/postcss-selector-rename.git",
+  "author": "noyobo<noyobo@gmail.com>",
+  "keywords": [
+    "postcss-plugin",
+    "selector-rename"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "release": "standard-version"
+  },
+  "devDependencies": {
+    "fs-extra": "^10.0.0",
+    "jest": "^27.3.1",
+    "postcss": "^8.3.11",
+    "standard-version": "^9.3.2",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "postcss-selector-parser": "^6.0.6"
+  },
+  "peerDependencies": {
+    "postcss": "^8.0.0"
+  }
+}

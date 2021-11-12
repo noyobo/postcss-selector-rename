@@ -1,0 +1,26 @@
+.a .b {
+  color: red;
+}
+
+.a + .b {
+  color: red;
+}
+
+.a ~ .b {
+  color: red;
+}
+
+.a:not(.b) {
+  color: red;
+}
+
+view view {
+  color: red;
+}
+
+view + view {
+  color: red;
+}
+#a .b {
+  color: red;
+}
