@@ -1,6 +1,6 @@
 {
   "name": "postcss-selector-rename",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A PostCSS plugin to rename css selector",
   "main": "index.js",
   "types": "index.d.ts",
