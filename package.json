@@ -10,6 +10,10 @@
     "postcss-plugin",
     "selector-rename"
   ],
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
   "license": "MIT",
   "scripts": {
     "test": "jest",
