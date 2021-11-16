@@ -1,6 +1,7 @@
 const selectorParser = require('postcss-selector-parser');
+const postcss = require('postcss');
 
-const Plugin = (options = {}) => {
+module.exports = postcss.plugin('postcss-selector-parser', function (options = {}) {
   const opts = Object.assign(
     {
       test: () => true,
@@ -9,11 +10,9 @@ const Plugin = (options = {}) => {
     },
     options
   );
-
   if (typeof opts.test !== 'function' && !(opts.test instanceof RegExp)) {
     throw new Error(`Options.test invalid`);
   }
-
   const test = opts.test instanceof RegExp ? (name) => opts.test.test(name) : opts.test;
 
   function renameNode(type, node) {
@@ -33,15 +32,11 @@ const Plugin = (options = {}) => {
     return rule.parent && rule.parent.type === 'atrule';
   }
 
-  return {
-    postcssPlugin: 'postcss-selector-rename',
-    Rule(rule) {
+  return function (root) {
+    root.walkRules(function (rule) {
       if (!isAtRuleChild(rule)) {
         return selectorProcessor.process(rule);
       }
-    },
+    });
   };
-};
-
-module.exports = Plugin;
-module.exports.postcss = true;
+});
