@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/noyobo/postcss-selector-rename/compare/v2.0.0...v2.1.0) (2021-11-16)
+
+
+### Features
+
+* support postcss 7.x ([a135814](https://github.com/noyobo/postcss-selector-rename/commit/a135814a234ee663d8fe85e039f0cc95353097fa))
+
 ## [2.0.0](https://github.com/noyobo/postcss-selector-rename/compare/v1.0.2...v2.0.0) (2021-11-16)
 
 ### [1.0.2](https://github.com/noyobo/postcss-selector-rename/compare/v1.0.1...v1.0.2) (2021-11-12)
