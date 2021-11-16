@@ -1,6 +1,8 @@
-# postcss-selector-rename
+# postcss-selector-rename@3.x
 
 A PostCSS plugin to rename css selector.
+
+- required postcss >= 8.0
 
 ```css
 .foo {
