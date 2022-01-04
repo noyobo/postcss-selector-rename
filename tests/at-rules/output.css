@@ -1,0 +1,78 @@
+@counter-style thumbs {
+  system: cyclic;
+  symbols: '\1F44D';
+  suffix: ' ';
+}
+
+ty-ul {
+  list-style: thumbs;
+}
+
+/* At the top level of your code */
+@media screen and (min-width: 900px) {
+  ty-article {
+    padding: 1rem 3rem;
+  }
+}
+
+/* Nested within another conditional at-rule */
+@supports (display: flex) {
+  @media screen and (min-width: 900px) {
+    ty-article {
+      display: flex;
+    }
+  }
+}
+
+@supports not (display: grid) {
+  ty-div {
+    float: right;
+  }
+}
+
+@document url("https://www.example.com/")
+{
+  ty-h1 {
+    color: green;
+  }
+}
+
+@page {
+  margin: 1cm;
+}
+
+@page :first {
+  margin: 2cm;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Regular-webfont.woff2') format('woff2'), url('/fonts/OpenSans-Regular-webfont.woff') format('woff');
+}
+
+/* At-rule for "nice-style" in Font One */
+@font-feature-values Font One {
+  @styleset {
+    nice-style: 12;
+  }
+}
+
+/* At-rule for "nice-style" in Font Two */
+@font-feature-values Font Two {
+  @styleset {
+    nice-style: 4;
+  }
+}
+
+@property --property-name {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #c0ffee;
+}
+
+@color-profile --swop5c {
+  src: url('https://example.org/SWOP2006_Coated5v2.icc');
+}
+.ty-header {
+  background-color: color(--swop5c 0% 70% 20% 0%);
+}

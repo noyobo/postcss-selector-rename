@@ -1,0 +1,21 @@
+
+view + view {
+  color: red;
+}
+
+view * {
+  color: red;
+}
+
+view[hidden='a'] {
+  color: red;
+}
+@media (prefers-color-scheme: dark) {
+    view view {
+        color: red;
+    }
+
+    view + view {
+        color: red;
+    }
+}

@@ -1,0 +1,21 @@
+
+ty-view + ty-view {
+  color: red;
+}
+
+ty-view * {
+  color: red;
+}
+
+ty-view[hidden='a'] {
+  color: red;
+}
+@media (prefers-color-scheme: dark) {
+    ty-view ty-view {
+        color: red;
+    }
+
+    ty-view + ty-view {
+        color: red;
+    }
+}

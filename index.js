@@ -29,14 +29,14 @@ const Plugin = (options = {}) => {
     opts.selector.tags && selectors.walkTags(renameNode.bind(null, 'tags'));
   });
 
-  function isAtRuleChild(rule) {
-    return rule.parent && rule.parent.type === 'atrule';
+  function isKeyframe(rule) {
+    return rule.parent && rule.parent.type === 'atrule' && rule.parent.name === 'keyframes';
   }
 
   return {
     postcssPlugin: 'postcss-selector-rename',
     Rule(rule) {
-      if (!isAtRuleChild(rule)) {
+      if (!isKeyframe(rule)) {
         return selectorProcessor.process(rule);
       }
     },

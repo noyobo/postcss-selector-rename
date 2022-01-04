@@ -31,7 +31,7 @@ async function run(dir) {
 
 const features = readdirSync(__dirname)
   .filter((dir) => dir !== '__snapshots__')
-  // .filter((dir) => dir.startsWith('comment'))
+  // .filter((dir) => dir.startsWith('keyframe'))
   .filter((d) => {
     return statSync(path.join(__dirname, d)).isDirectory();
   });
