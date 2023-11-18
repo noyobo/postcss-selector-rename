@@ -1,10 +1,13 @@
 const postcss = require('postcss');
+const postcssPkg = require.resolve('postcss/package.json');
 const path = require('path');
 
 const plugin = require('..');
-const { readFileSync, existsSync, readdirSync, statSync, writeFileSync } = require('fs-extra');
+const { readFileSync, existsSync, readdirSync, statSync, writeFileSync, readJsonSync } = require('fs-extra');
 
 const argv = process.argv.splice(2);
+
+console.log('postcss.version', readJsonSync(postcssPkg).version);
 
 async function run(dir) {
   let opts;
