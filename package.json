@@ -4,7 +4,7 @@
   "description": "A PostCSS plugin to rename css selector",
   "main": "index.js",
   "types": "index.d.ts",
-  "repository": "git@github.com:noyobo/postcss-selector-rename.git",
+  "repository": "git+https://github.com/noyobo/postcss-selector-rename.git",
   "author": "noyobo<noyobo@gmail.com>",
   "keywords": [
     "postcss-plugin",
